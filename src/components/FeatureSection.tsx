@@ -9,12 +9,12 @@ type featureType = {
 
 function FeatureSection() {
   return (
-    <div className='relative mt-20 border-b border-neutral-800 size-full'>
+    <div className='relative mt-10 lg:mt-20 border-b border-neutral-800 size-full'>
       <div className="text-center">
         <span className="bg-background text-primary rounded-full h-6 font-medium px-2 py-1 uppercase">
           feature
         </span>
-        <h2 className='text-3xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide'>
+        <h2 className='text-2xl sm:text-5xl lg:text-6xl mt-10 lg:mt-20 tracking-wide'>
           Why Choose{' '}
           <span className='bg-gradient-to-r from-primary to-gradient-primary text-transparent bg-clip-text'>Us?</span>
         </h2>
@@ -28,8 +28,8 @@ function FeatureSection() {
                 {feature.icon}
               </div>
               <div>
-                <h5 className='mt-1 mb-6 text-xl'>{feature.text}</h5>
-                <p className='text-md p-2 mb-10 lg:mb-20 text-foreground'>{ feature.description }</p>
+                <h5 className='text-lg lg:text-xl mt-1 mb-2 lg:mb-6'>{feature.text}</h5>
+                <p className='text-sm lg:text-md p-2 mb-5 lg:mb-20 text-foreground'>{ feature.description }</p>
                 
               </div>
             </div>

@@ -11,16 +11,26 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import { Badge } from "@/components/ui/badge"
+import { Link } from "react-router-dom";
 
 const TWEEN_FACTOR_BASE = 0.2
 
 type PropType = {
   slides: number[]
   options?: EmblaOptionsType
+  workoutPlans: [{
+    name: string;
+    type: string;
+    image: string;
+    duration: string;
+    frequency: string;
+    goal: string;
+  }]
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props
+  const { slides, options, workoutPlans } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const tweenFactor = useRef(0)
   const tweenNodes = useRef<HTMLElement[]>([])
@@ -106,24 +116,33 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((index) => (
             <div className="embla__slide" key={index}>
+              <Link to={"/"}>
               <div className="embla__parallax">
                 <div className="embla__parallax__layer">
-                  {/* <div className="relative embla__slide__img embla__parallax__img">
+                  <div className="relative embla__slide__img embla__parallax__img">
                   <img
-                    className="embla__slide__img embla__parallax__img"
-                    src={`https://picsum.photos/600/350?v=${index}`}
+                    className="embla__slide__img embla__parallax__img opacity-80"
+                      // src={`https://picsum.photos/600/350?v=${index}`}
+                        src={`src/assets/img/${workoutPlans[index].image}`}
                     alt="Your alt text"
                     />
-                    <h1 className='relative bottom-50 left-50'>Hello this is text Hello this is text Hello this is text Hello this is text Hello this is text Hello this is text</h1>
-                  </div> */}
-                  <img
+                    <div className='absolute top-5 bottom-5 left-20 right-20 lg:bottom-10 lg:left-40 lg:right-40 lg:top-10'>
+                        <h1 className='text-2xl lg:text-4xl mb-10'>{workoutPlans[index].name}</h1>
+                      <Badge className='mb-5'>{workoutPlans[index].type}</Badge>
+                      <p className='text-sm lg:text-md font-bold'>Duration : <span className='font-normal'>{workoutPlans[index].duration}</span></p>
+                      <p className='text-sm lg:text-md font-bold'>Frequency : <span className='font-normal'>{workoutPlans[index].frequency}</span></p>
+                      <p className='text-sm lg:text-md font-bold'>Goal : <span className='font-normal'>{workoutPlans[index].goal}</span></p>
+                    </div>
+                  </div>
+                  {/* <img
                     className="embla__slide__img embla__parallax__img"
                     src={`https://picsum.photos/600/350?v=${index}`}
                     alt="Your alt text"
-                  />
+                  /> */}
                 </div>
               </div>
-            </div>
+              </Link>
+              </div> 
           ))}
         </div>
       </div>

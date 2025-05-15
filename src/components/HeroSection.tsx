@@ -24,11 +24,11 @@ function HeroSection() {
           </h1>
           <div className="flex flex-wrap sm:flex-nowrap justify-center my-10 gap-10">
             <Link to={"/signup"}>
-              <Button className="cursor-pointer" variant="custom" size="lg">
+              <Button className="cursor-pointer" variant="default" size="lg">
                 Get Started
               </Button>
             </Link>
-            <Button className="cursor-pointer" variant="custom" size="lg">
+            <Button className="cursor-pointer" variant="default" size="lg">
               Browse Exercises
             </Button>
           </div>

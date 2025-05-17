@@ -2,6 +2,7 @@ import FeatureSection from '@/components/FeatureSection'
 import HeroSection from '@/components/HeroSection'
 import Navbar from '@/components/Navbar'
 import WorkoutPlanSection from '@/components/WorkoutPlanSection'
+import PopularExercisesSection from '@/components/PopularExercisesSection'
 import { useEffect, useRef, useState } from 'react'
 
 function Dashboard() {
@@ -32,6 +33,9 @@ function Dashboard() {
       </div>
       <div style={{ height: `calc(100dvh - ${height}px)` }} className="">
         <FeatureSection />
+      </div>
+      <div style={{ height: `calc(100dvh - ${height}px)` }} className="">
+        <PopularExercisesSection />
       </div>
       <div style={{ height: `calc(100dvh - ${height}px)` }} className="">
         <WorkoutPlanSection />

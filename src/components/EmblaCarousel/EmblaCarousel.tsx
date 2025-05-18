@@ -19,14 +19,7 @@ const TWEEN_FACTOR_BASE = 0.2
 type PropType = {
   slides: number[]
   options?: EmblaOptionsType
-  workoutPlans: [{
-    name: string;
-    type: string;
-    image: string;
-    duration: string;
-    frequency: string;
-    goal: string;
-  }]
+  workoutPlans: { name: string; type: string; image: string; duration: string; frequency: string; goal: string; }[]
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {

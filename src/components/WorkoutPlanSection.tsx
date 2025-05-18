@@ -1,8 +1,7 @@
-import React from 'react'
 import EmblaCarousel from './EmblaCarousel/EmblaCarousel'
 import { EmblaOptionsType } from 'embla-carousel'
 import '../css/embla.css';
-import { workoutPlans } from "../constants";
+import { workoutPLANS } from "../constants";
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true}
 const SLIDE_COUNT = 4
@@ -21,7 +20,7 @@ function WorkoutPlanSection() {
       </div>
 
       <div className="mt-10 lg:mt-20">
-        <EmblaCarousel slides={SLIDES} options={OPTIONS} workoutPlans={workoutPlans} />
+        <EmblaCarousel slides={SLIDES} options={OPTIONS} workoutPlans={workoutPLANS} />
       </div>
     </div>
   )

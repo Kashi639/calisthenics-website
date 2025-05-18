@@ -32,7 +32,7 @@ export const features = [
   },
 ]
 
-export const workoutPlans = [
+export const workoutPLANS = [
   {
     name: "Foundation Builder",
     type: "Beginner",
@@ -65,4 +65,27 @@ export const workoutPlans = [
     frequency: "2 Days/Week (add to main plan)",
     goal: "Prevent injury & improve flexibility"
   },
+]
+
+export const popularExercises = [
+  {
+    name: "Push-ups",
+    description: "Targets chest, triceps & core. Perfect for building upper body strength.",
+    image: "pe_push_ups.jpg"
+  },
+  {
+    name: "Pull-ups",
+    description: "An advanced back & biceps killer. The king of pulling movements.",
+    image: "pe_pull_ups.jpg"
+  },
+  {
+    name: "Squats",
+    description: "Build powerful legs & glutes. Master bodyweight before loading up.",
+    image: "pe_squats.jpg"
+  },
+  {
+    name: "Dips",
+    description: "Mass builder for triceps & chest. A must for upper body development.",
+    image: "pe_dips.jpg"
+  }
 ]

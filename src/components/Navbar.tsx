@@ -35,10 +35,10 @@ function Navbar() {
 
           <div className="hidden lg:flex justify-center space-x-12 item center">
             <Link to={"/signin"}>
-              <Button className="cursor-pointer" variant="custom">Sign In</Button>
+              <Button className="cursor-pointer" >Sign In</Button>
             </Link>
             <Link to={"/signup"}>
-              <Button className="cursor-pointer" variant="custom">Create an Account</Button>
+              <Button className="cursor-pointer" >Create an Account</Button>
             </Link>
             <ModeToggle />
           </div>
@@ -64,10 +64,10 @@ function Navbar() {
             </ul>
             <div className="flex space-x-6">
             <Link to={"/signin"}>
-              <Button className="cursor-pointer" variant="custom">Sign In</Button>
+              <Button className="cursor-pointer">Sign In</Button>
             </Link>
             <Link to={"/signup"}>
-              <Button className="cursor-pointer" variant="custom">Create an Account</Button>
+              <Button className="cursor-pointer">Create an Account</Button>
             </Link>
             <ModeToggle />
             </div>

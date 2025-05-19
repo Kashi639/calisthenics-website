@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection'
 import Navbar from '@/components/Navbar'
 import PopularExercisesSection from '@/components/PopularExercisesSection'
 import WorkoutPlanSection from '@/components/WorkoutPlanSection'
+import ProgressTrackingSection from '@/components/ProgressTrackingSection'
 import useScreenWidth from '@/hooks/useScreenWidth'
 import { useEffect, useRef, useState } from 'react'
 
@@ -41,6 +42,9 @@ function Dashboard() {
       </div>
       <div style={{ height: `calc(100dvh - ${height}px)` }} className="">
         <WorkoutPlanSection />
+      </div>
+      <div style={{ height: screenWidth >= 1024 && screenWidth <= 1280 ? 'auto' : `calc(100dvh - ${height}px)` }} className="">
+        <ProgressTrackingSection />
       </div>
     </>
   )

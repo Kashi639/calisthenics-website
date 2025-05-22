@@ -1,12 +1,17 @@
 import FeatureSection from '@/components/FeatureSection'
 import HeroSection from '@/components/HeroSection'
 import Navbar from '@/components/Navbar'
+import PopularExercisesSection from '@/components/PopularExercisesSection'
 import WorkoutPlanSection from '@/components/WorkoutPlanSection'
+import ProgressTrackingSection from '@/components/ProgressTrackingSection'
+import Footer from '@/components/Footer'
+import useScreenWidth from '@/hooks/useScreenWidth'
 import { useEffect, useRef, useState } from 'react'
 
 function Dashboard() {
 
   const [height, setHeight] = useState(0)
+  const screenWidth = useScreenWidth();
   const ref = useRef(null); //<HTMLInputElement | null>
 
   useEffect(() => {
@@ -33,9 +38,18 @@ function Dashboard() {
       <div style={{ height: `calc(100dvh - ${height}px)` }} className="">
         <FeatureSection />
       </div>
+      <div style={{ height: screenWidth < 1042 ? 'auto' : `calc(100dvh - ${height}px)` }} className="">
+        <PopularExercisesSection />
+      </div>
       <div style={{ height: `calc(100dvh - ${height}px)` }} className="">
         <WorkoutPlanSection />
       </div>
+      <div style={{ height: screenWidth >= 1024 && screenWidth <= 1280 ? 'auto' : `calc(100dvh - ${height}px)` }} className="">
+        <ProgressTrackingSection />
+      </div>
+      {/* <div style={{ height: `calc(100dvh - ${height}px)` }} className=""> */}
+        <Footer />
+      {/* </div> */}
     </>
   )
 }
